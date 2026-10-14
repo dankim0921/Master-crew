@@ -1,0 +1,1087 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASTER CREW | 청소 서비스</title>
+  <meta name="description" content="수원·용인 입주청소 및 생활공간 청소 서비스">
+
+  <style>
+    :root {
+  --bg: #071426;
+  --panel: #10243d;
+  --green: #63b3ff;
+  --white: #f7fbff;
+  --muted: #b3c5d9;
+  --line: #29415c;
+}
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--white);
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(211, 213, 216, 0.98);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+   
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  width: 190px;
+  max-height: 65px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+    .nav-links {
+  display: flex;
+  gap: clamp(8px, 1.5vw, 24px);
+  font-size: clamp(11px, 1.1vw, 14px);
+  color: #243247;
+  margin-left: auto;
+  margin-right: clamp(12px, 2vw, 32px);
+}
+
+.nav-links a {
+  color: #243247;
+  font-size: inherit;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: var(--green);
+      color: #151910;
+      font-weight: 800;
+      border-radius: 7px;
+    }
+
+    .hero {
+  min-height: 65vh;
+  padding: 35px 24px 75px;
+  background: radial-gradient(
+    ellipse at 80% 15%,
+    #2a3823,
+    transparent 48%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero .main-slogan {
+  text-align: center;
+}
+.hero .container {
+  transform: translateY(-35px);
+}
+.hero .main-slogan span {
+  display: inline-block;
+  font-size: 1.3em;
+  color: #60adff;
+  font-weight: 900;
+}
+
+.hero .container > p {
+  text-align: center;
+}
+
+.hero-location {
+  margin: 2px 0 0 !important;
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+  color: #A8BED8 !important;
+  font-weight: 300 !important;
+  text-align: center;
+}
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 76px);
+      line-height: 1.15;
+      letter-spacing: clamp(-3px, -0.25vw, -1px);
+      margin: 22px 0;
+    }
+
+    h1 span { color: var(--green); }
+
+    .hero p {
+      max-width: 540px;
+      color: var(--muted);
+      font-size: 17px;
+      transform: translateY(-20px);
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .outline {
+      display: inline-block;
+      padding: 11px 20px;
+      border: 1px solid #596052;
+      border-radius: 7px;
+      font-weight: 700;
+    }
+
+    .trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin-top: 45px;
+      font-size: 13px;
+      color: #c7cec1;
+    }
+
+    section { padding: 80px 0; }
+
+    .label {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: clamp(29px, 4vw, 42px);
+      line-height: 1.3;
+      letter-spacing: -1.5px;
+      margin: 12px 0 18px;
+    }
+
+    .desc {
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+    }
+
+    .card {
+      padding: 27px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 { margin: 0 0 10px; }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .process { background: #151815; }
+
+    .step {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .quote {
+      background: radial-gradient(
+        ellipse at 90% 10%, #293721, transparent 45%
+      );
+    }
+
+    .quote-layout {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    form {
+      padding: 28px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field { margin-bottom: 17px; }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      background: #101210;
+      color: var(--white);
+      border: 1px solid #3b4139;
+      border-radius: 7px;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .submit {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+
+    .notice {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 15px;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .nav-links { gap: 12px; font-size: 12px; }
+      .nav-button { display: none; }
+      .hero { padding: 70px 0; }
+      .cards, .quote-layout, .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .quote-layout { gap: 25px; }
+      section { padding: 60px 0; }
+      h1 { letter-spacing: -2px; }
+    }
+    
+/* 첫 화면 중앙 정렬 */
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .main-slogan {
+  width: 100%;
+  text-align: center;
+}
+
+.hero .container > p {
+  width: 100%;
+  text-align: center;
+}
+
+.hero .hero-buttons {
+  justify-content: center;
+}
+
+/* 서비스 영역부터 배경색 변경 */
+#service {
+  background: #13243a;
+  color: #f4f7fc;
+}
+.hero {
+  background: linear-gradient(180deg, #071426 0%, #102a25 100%);
+    180deg,
+    #081629 0%,
+    #10251f 60%,
+    #17212d 100%
+  );
+  padding-bottom: 0px;
+
+}
+
+.hero .hero-buttons {
+  position: relative;
+  z-index: 1;
+}
+/* MASTER CREW 고객 고민 섹션 */
+.concerns {
+  width: 100%;
+  box-sizing: border-box;
+padding: 45px 24px 24px;
+margin-bottom: 24px;
+
+  background: transparent;
+  color: #10233b;
+  position: relative;
+  z-index: 1;
+}
+
+.concerns::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: transparent;
+  z-index: -1;
+}
+
+.concerns-heading {
+  max-width: 1100px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.concerns-heading > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #2879cf;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.concerns-heading h2 {
+  margin: 0 0 14px;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.35;
+  letter-spacing: -1.5px;
+}
+.concerns-heading p {
+  text-align: center !important;
+  width: 100%;
+  margin: 0 auto;
+  color: #263b55 !important;
+  font-weight: 600;
+}
+.concerns-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.concern-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dfe6ee;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(16, 35, 59, 0.05);
+}
+
+.concern-card > img,
+.concern-photo-placeholder {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.concern-photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #dce6f1;
+  color: #52677e;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.concern-content {
+  padding: 25px 26px 28px;
+}
+
+.concern-content > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #2879cf;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.concern-content h3 {
+  margin: 0 0 18px;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.55;
+  letter-spacing: -0.5px;
+  word-break: keep-all;
+}
+
+.concern-content p {
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid #e7edf3;
+  color: #2468ae;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+@media (max-width: 700px) {
+  .concerns {
+    padding: 64px 18px 72px;
+  }
+
+  .concerns-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .concern-card > img,
+  .concern-photo-placeholder {
+    height: 210px;
+  }
+
+  .concern-content {
+    padding: 22px 20px 24px;
+  }
+}
+/* 배민 주아체: 홈페이지 제목에 적용 */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@font-face {
+  font-family: 'BM Hanna Air';
+  src: url('./fonts/한나체Air.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.main-slogan,
+.hero h2,
+section h2 {
+  font-family: 'Jua', sans-serif;
+}
+p,
+.concern-content p {
+  font-family: 'BM Hanna Air', sans-serif;
+}/* 견적 문의 버튼 반응형 크기 */
+.nav-button {
+  font-size: clamp(12px, 1.2vw, 18px);
+  padding: clamp(6px, 0.7vw, 10px) clamp(10px, 1.5vw, 18px);
+  white-space: nowrap;
+}.eyebrow {
+  color: #ffffff;
+}
+
+.eyebrow::first-line {
+  color: #ffffff;
+}.eyebrow-brand {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.eyebrow-sub {
+  color: #60a5fa;
+}
+/* 메인 화면 로고 크기 및 위치 */
+.logo-eyebrow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 0;
+}
+
+.logo-eyebrow img {transform: translateY(20px);
+  display: block;
+  width: clamp(120px, 16vw, 200px);
+  max-width: 85%;
+  height: auto;
+  object-fit: contain;
+}
+.concerns-logo {
+  display: inline-block;
+  width: 200px;
+  max-width: 42vw;
+  height: auto;
+  object-fit: contain;
+  vertical-align: middle;
+  transform: translateY(-7px);
+  margin: 0 -6px;
+}
+
+.concerns-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 24px;
+}
+.concerns-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  padding: 10px 12px;
+}
+
+.title-text {
+  min-width: 0;
+  line-height: 1.05;
+}
+
+.title-why {
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 900;
+  color: #17284D;
+  margin-bottom: 6px;
+}
+
+.title-main {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 8px;
+  font-family: inherit;
+  font-size: clamp(25px, 4vw, 54px);
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.title-master {
+  color: #168BFF;
+}
+
+.title-question {
+  color: #17284D;
+}
+
+.title-character {
+  position: relative;
+  flex-shrink: 0;
+  padding-top: 22px;
+}css
+.concerns-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.concerns-title-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  position: relative;
+}
+
+.concerns-why {
+  color: #172b4d;
+  font-family: "BM Jua", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -1.8px;
+  line-height: 1;
+  margin-bottom: -14px;
+}
+.concerns-brand {
+  color: #278cff;
+  font-size: clamp(25px, 4vw, 38px);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+
+}.concerns-description {
+  font-family: "BM Jua", sans-serif;
+  font-size: 3cap;
+  font-weight: 00;
+  letter-spacing: -1.8px;
+  -webkit-text-stroke: 0.5px currentColor;
+}
+
+.concerns-question {
+  color: #172b4d;
+  font-family: "BM Jua", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -1.8px;
+  -webkit-text-stroke: 0.5px currentColor;
+}
+.concerns-thinking {
+    width: 55px;
+  height: 55px;
+  object-fit: contain;
+  transform: scaleX(-1);
+}
+
+.concerns-heading > p {
+  color: #172b4d;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}.concerns-why{
+  position: relative;
+}/* 왜 마스터크루여야 할까? 제목 영역 박스 */
+.concerns-heading {
+  max-width:870px;
+  width: calc(100% - 48px);
+  margin: 0 auto 28px;
+  padding: 55px 24px 0px;
+  background: #f7faff;
+  border: 1px solid #dce7f3;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(23, 43, 77, 0.08);
+  box-sizing: border-box;
+}.concerns-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 16px auto 0;
+}
+
+.concerns-description img.concerns-thinking {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  transform: scaleX(-1);
+}
+
+.concerns-description img.description-logo {
+  width: 205px;
+  height: auto;
+  object-fit: contain;
+  transform: translate(10px, -7px);
+}.concerns-description {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+}.concerns-description {
+  font-family: "BM Jua", sans-serif !important;
+  font-size: 34px !important;
+  font-weight: 700 !important;
+  letter-spacing: -1.8px;
+  line-height: 1.7;
+}
+
+.concerns-description img {
+  flex-shrink: 0;
+}.concerns-description {
+  margin-top: 50px !important;
+}/* 이모티콘 크기와 위치 복구 */
+.concerns-title-line img[src*="why3.png"] {
+  position: relative !important;
+  width: 55px !important;
+  height: 55px !important;
+  margin: 0 !important;
+  transform: translate(0, -0px) !important;
+  flex-shrink: 0;
+}
+
+.description-first {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transform: none !important;
+}
+
+.description-first .description-what {
+  position: absolute !important;
+  left: 125px !important;
+  top: 10% !important;
+  width: 105px !important;
+  height: 140px !important;
+  object-fit: contain !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  transform: translateY(-50%) scaleX(-1) !important;
+}
+
+.description-first,
+.description-middle,
+.description-second {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}/* 설명 문구의 위아래 간격 조정 */
+.description-first {
+  margin-bottom: -20px !important;
+}
+
+.description-middle {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.description-second {
+  margin-top: 0 !important;
+}
+
+.description-first,
+.description-second {
+  gap: 12px;
+}.concerns-title-line .concerns-logo,
+.concerns-title-line .concerns-question {
+  position: relative;
+  right: -30px;
+}/* why3 크기가 커져도 제목 위치 고정 */
+.concerns-title-line {
+  position: relative;
+  padding-right: 0 !important;
+}
+
+.concerns-title-line img[src*="why3.png"] {
+  position: absolute !important;
+  width: 190px !important;
+  height: 100px !important;
+  left: calc(30% + 10px);
+  top: -65%;
+  margin: 0 !important;
+  transform: translateY(-50%) !important;
+  flex-shrink: 0;
+.description-first .description-what {
+  position: absolute !important;
+  left: -75px !important;
+  top: 50% !important;
+  width: 105px !important;
+  height: 105px !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  transform: translateY(-50%) scaleX(-1) !important;
+}  
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+<a class="logo" href="#home">
+  
+<img src="./images/LOGO.png" alt="MASTER CREW 청소 서비스 로고">
+</div>  
+<div class="nav-links">
+  <a href="#service">우리가 하는 일</a>
+  <a href="#reviews">작업후기</a>
+  <a href="#faq">FAQ</a>
+  <a href="#notice">공지사항</a>
+</div>
+
+      <a class="button nav-button" href="#quote">견적 문의 ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+      
+<div class="eyebrow logo-eyebrow">
+  <img src="./images/LOGO white.png" alt="MASTER CREW">
+</div>
+<h1 class="main-slogan">
+  하루에<br>
+  <span>한 집만</span><br>
+  청소합니다.
+</h1>
+<p>
+  여러 집보다 한 집에 집중합니다.<br>
+  젊은 팀원들의 실행력과 꼼꼼함으로<br>
+  마지막까지 책임감 있게 마무리합니다.
+  
+<p class="hero-location">
+  분당 · 판교 · 광교 · 동탄 · 하남 · 위례 신도시 입주청소 전문업체
+</p>
+        <div class="concerns" id="concerns">
+  <div class="concerns-heading">
+    <div class="concerns-title">
+      <span class="concerns-why">왜</span>
+      <div class="concerns-title-line">
+        <img src="./images/logopont.png" alt="MASTER CREW" class="concerns-logo">
+        <span class="concerns-question">여야 할까?</span>
+        <img src="./images/why3.png" alt="" class="concerns-why3">
+      </div>
+    <div class="concerns-description">
+  <div class="description-first">
+    <img src="./images/logopont.png" alt="MASTER CREW" class="description-logo">
+    <span>는</span>
+  </div>
+
+  <div class="description-first">
+  <img src="./images/what.png" alt="" class="description-what">
+  고객이 가장 걱정하는 부분을
+</div>
+
+  <div class="description-second">
+    <img src="./images/logopont.png" alt="MASTER CREW" class="description-logo">
+    <span>만의 방식으로 해결합니다.</span>
+  </div>
+</div>
+  </span>
+</p>
+  </div>
+</div>
+
+  <div class="concerns-grid">
+    <article class="concern-card">
+      <img src="kakao-progress.png" alt="청소 진행 상황 안내">
+      <div class="concern-content">
+        <span>01 · 진행 상황</span>
+        <h3>어디까지 청소했는지 모르겠어요.</h3>
+        <p>카카오톡 실시간 진행 상황 안내</p>
+<p>마스터크루 카카오톡으로 현재 진행 상황을 확인할 수 있어요.</p>
+      </div>
+    </article>
+
+    <article class="concern-card">
+      <img src="pic 2.png" alt="청소 견적과 작업 범위 안내">
+      <div class="concern-content">
+        <span>02 · 추가 비용</span>
+        <h3>나중에 추가 요금이 나올까 봐 걱정돼요.</h3>
+        <p>→ 사전 견적과 작업 범위 안내</p>
+      </div>
+    </article>
+
+    <article class="concern-card">
+      <div class="concern-photo-placeholder">03 · 청소 품질</div>
+      <div class="concern-content">
+        <span>03 · 청소 품질</span>
+        <h3>대충 끝내고 가면 어떡하죠?</h3>
+        <p>→ 하루 한 집 집중 케어</p>
+      </div>
+    </article>
+
+
+     <article class="concern-card">
+      <div class="concern-photo-placeholder">04 · 사후 관리</div>
+      <div class="concern-content">
+        <span>04 · 사후 관리</span>
+        <h3>청소 후 문제가 생길까 걱정돼요</h3>
+        <p>→  표준화된 A/S 정책 안내</p>
+      </div>
+    </article>
+    </section>
+
+    <section id="service">
+      <div class="container">
+        <div class="label">우리가 하는 일</div>
+        <h2>청소는 경험에서 차이가 납니다</h2>
+        <p class="desc">
+          호주 현지에서 배운 책임감으로 공간에 맞게
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">⌂</div>
+            <h3>입주 · 이사 청소</h3>
+            <p>주방, 욕실, 창틀 등 주요 구역의 오염 상태를 확인하고 청소합니다.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">✳</div>
+            <h3>거주 청소</h3>
+            <p>생활 공간과 고객 요청에 맞춰 필요한 작업을 상담합니다.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">▦</div>
+            <h3>상가 · 사무실 청소</h3>
+            <p>공간의 규모와 운영 환경에 따라 작업 범위를 안내합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="container">
+        <div class="label">HOW WE WORK</div>
+        <h2>간편한 3단계 진행</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="step">STEP 01</div>
+            <h3>견적 문의</h3>
+            <p>지역, 평수, 희망 날짜와 요청 사항을 전달합니다.</p>
+          </article>
+          <article class="card">
+            <div class="step">STEP 02</div>
+            <h3>상담 및 일정 확정</h3>
+            <p>작업 범위와 금액을 확인하고 일정을 조율합니다.</p>
+          </article>
+          <article class="card">
+            <div class="step">STEP 03</div>
+            <h3>청소 진행</h3>
+            <p>협의된 작업 범위에 맞춰 청소를 진행합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote" id="quote">
+      <div class="container quote-layout">
+        <div>
+          <div class="label">FREE ESTIMATE</div>
+          <h2>청소 견적을<br>문의해 주세요.</h2>
+          <p class="desc">
+            기본 정보를 입력해 견적 상담을 준비해 보세요.
+          </p>
+          <p class="notice">
+            현재 홈페이지 제작 초기 단계입니다.
+            이 양식은 아직 실제 예약 시스템과 연결되지 않았습니다.
+          </p>
+        </div>
+
+        <form id="quoteForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="customer">성함</label>
+              <input id="customer" name="customer" required
+                placeholder="성함을 입력해 주세요">
+            </div>
+            <div class="field">
+              <label for="phone">연락처</label>
+              <input id="phone" name="phone" type="tel" required
+                placeholder="연락처를 입력해 주세요">
+            </div>
+            <div class="field">
+              <label for="area">서비스 지역</label>
+              <select id="area" name="area" required>
+                <option value="">지역 선택</option>
+                <option>수원</option>
+                <option>용인</option>
+                <option>동탄</option>
+                <option>광교</option>
+                <option>성남</option>
+                <option>판교</option>
+                <option>기타 지역</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="size">공간 규모</label>
+              <select id="size" name="size" required>
+                <option value="">평수 선택</option>
+                <option>10평 미만</option>
+                <option>10~20평</option>
+                <option>21~30평</option>
+                <option>31~40평</option>
+                <option>41평 이상</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="date">희망 날짜</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+
+          <div class="field">
+            <label for="details">추가 요청 사항</label>
+            <textarea id="details" name="details"
+              placeholder="청소 종류, 공간 상태 등"></textarea>
+          </div>
+
+          <button class="button submit" type="submit">
+            견적 문의 내용 확인하기
+          </button>
+
+          <p class="notice">
+            시안용 양식이며, 현재 입력 내용은 전송되거나 저장되지 않습니다.
+            실제 고객 정보를 입력하지 마세요.
+          </p>
+        </form>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>MASTER CREW · CLEANING SERVICE</span>
+      <span>수원 · 용인 및 인근 지역</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("quoteForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("홈페이지 시안입니다. 실제 견적 접수 기능은 다음 단계에서 연결할 예정입니다.");
+    });
+  </script>
+</body>
+</html>
